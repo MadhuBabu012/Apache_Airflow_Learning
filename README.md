@@ -4,14 +4,14 @@ This guide explains how to set up **Apache Airflow** using Docker and run DAGs f
 
 ---
 
-## 📌 Prerequisites
+##  Prerequisites
 
 * Docker Desktop installed and running
 * VS Code installed
 
 ---
 
-## 🚀 Step 1: Download Docker Compose File
+##  Step 1: Download Docker Compose File
 
 Download the official `docker-compose.yaml` from Apache Airflow documentation:
 
@@ -23,7 +23,7 @@ This file contains all configurations required to run Airflow services (webserve
 
 ---
 
-## 📁 Step 2: Create Project Folder Structure
+##  Step 2: Create Project Folder Structure
 
 Navigate to your project directory (e.g., `airflow_project`) and create required folders:
 
@@ -36,7 +36,7 @@ mkdir config
 
 ---
 
-## ⚙️ Step 3: Create `.env` File
+##  Step 3: Create `.env` File
 
 Create a `.env` file in the project root and add:
 
@@ -46,7 +46,7 @@ AIRFLOW_UID=50000
 
 ---
 
-## 🛠️ Step 4: Initialize Airflow Database
+##  Step 4: Initialize Airflow Database
 
 Run the following command:
 
@@ -67,7 +67,7 @@ This means:
 
 ---
 
-## ▶️ Step 5: Start Airflow Services
+##  Step 5: Start Airflow Services
 
 Start all Airflow services:
 
@@ -77,7 +77,7 @@ docker compose up -d
 
 ---
 
-## 🌐 Step 6: Access Airflow UI
+##  Step 6: Access Airflow UI
 
 Open your browser and go to:
 
@@ -92,7 +92,7 @@ Login credentials:
 
 ---
 
-## ✅ Step 7: Verify Running Containers
+##  Step 7: Verify Running Containers
 
 Check if all services are running:
 
@@ -102,7 +102,7 @@ docker ps
 
 ---
 
-## 🔄 Restart Services (if changes not reflected)
+##  Restart Services (if changes not reflected)
 
 ```bash
 docker compose restart
@@ -110,7 +110,7 @@ docker compose restart
 
 ---
 
-## 🧹 Cleanup (Stop and Remove Everything)
+##  Cleanup (Stop and Remove Everything)
 
 ```bash
 docker compose down --volumes --rmi all
@@ -118,7 +118,7 @@ docker compose down --volumes --rmi all
 
 ---
 
-## ⚡ Docker Command Modes
+##  Docker Command Modes
 
 | Command                | Description                        |
 | ---------------------- | ---------------------------------- |
@@ -129,7 +129,7 @@ docker compose down --volumes --rmi all
 
 ---
 
-## 📂 Container Details
+##  Container Details
 
 Docker creates a container group based on your folder name (e.g., `airflow_project`).
 
@@ -143,7 +143,7 @@ Inside it, you will see multiple containers like:
 
 ---
 
-## 🧪 Running Commands Inside Container
+##  Running Commands Inside Container
 
 1. Open Docker Desktop
 2. Select container (e.g., `airflow-apiserver`)
@@ -151,7 +151,7 @@ Inside it, you will see multiple containers like:
 
 ---
 
-## 📊 Useful Airflow CLI Commands
+##  Useful Airflow CLI Commands
 
 ### List all DAGs
 
@@ -179,7 +179,7 @@ airflow dags trigger <dag_id>
 
 ---
 
-## 📝 Notes
+##  Notes
 
 * Place your DAG files inside the `dags/` folder
 * Airflow automatically detects new DAGs
@@ -188,7 +188,7 @@ airflow dags trigger <dag_id>
 
 ---
 
-## 🎯 Summary
+##  Summary
 
 This setup allows you to:
 
